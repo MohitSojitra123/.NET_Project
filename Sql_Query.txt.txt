@@ -1,0 +1,114 @@
+use StudentProjectDb
+
+
+Select * from UserRoles
+Select * from Roles
+Select * from Users
+
+
+
+INSERT INTO Users
+(
+    FullName,
+    Email,
+    Password,
+    MobileNumber,
+    ProfilePicturePath
+)
+VALUES
+(
+    'Rahul Patel',
+    'rahul.patel@gmail.com',
+    'Rahul@123',
+    '9876543210',
+    '/images/users/rahul.jpg'
+),
+(
+    'Priya Shah',
+    'priya.shah@gmail.com',
+    'Priya@123',
+    '9876543211',
+    '/images/users/priya.jpg'
+),
+(
+    'Amit Joshi',
+    'amit.joshi@gmail.com',
+    'Amit@123',
+    '9876543212',
+    '/images/users/amit.jpg'
+),
+(
+    'Neha Mehta',
+    'neha.mehta@gmail.com',
+    'Neha@123',
+    '9876543213',
+    '/images/users/neha.jpg'
+),
+(
+    'Karan Desai',
+    'karan.desai@gmail.com',
+    'Karan@123',
+    '9876543214',
+    '/images/users/karan.jpg'
+),
+(
+    'Sneha Patel',
+    'sneha.patel@gmail.com',
+    'Sneha@123',
+    '9876543215',
+    '/images/users/sneha.jpg'
+),
+(
+    'Vivek Shah',
+    'vivek.shah@gmail.com',
+    'Vivek@123',
+    '9876543216',
+    '/images/users/vivek.jpg'
+),
+(
+    'Pooja Joshi',
+    'pooja.joshi@gmail.com',
+    'Pooja@123',
+    '9876543217',
+    '/images/users/pooja.jpg'
+);
+
+
+INSERT INTO Roles
+(
+    RoleName,
+    Description
+)
+VALUES
+(
+    'Admin',
+    'System administrator with full access'
+),
+(
+    'Faculty',
+    'Faculty member who manages student projects and tasks'
+),
+(
+    'Student',
+    'Student who works on assigned projects and tasks'
+);
+
+INSERT INTO UserRoles
+(
+    RoleId,
+    UserId
+)
+VALUES
+-- Admin
+(1, 1),
+
+-- Faculty
+(2, 2),
+(2, 3),
+(2, 4),
+
+-- Student
+(3, 5),
+(3, 6),
+(3, 7),
+(3, 8);
