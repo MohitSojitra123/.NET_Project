@@ -165,3 +165,4 @@ D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_M
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_Project_Management.pdb
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_Project_Management.genruntimeconfig.cache
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\ref\Student_Project_Management.dll
+D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_Project_Management.sourcelink.json
