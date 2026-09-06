@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Plus, Pencil, Trash2, Search, BookOpen } from 'lucide-react';
+import { Plus, Pencil, Trash2, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge } from '../../components/Badge';
-import { USERS, User, PROJECTS } from '../../data/mockData';
+import { USERS, PROJECTS } from '../../data/mockData';
 
 export default function Faculty() {
-  const [faculty, setFaculty] = useState<User[]>(USERS.filter(u => u.role === 'Faculty'));
+  const [faculty] = useState(USERS.filter(u => u.role === 'Faculty'));
   const [search, setSearch] = useState('');
 
   const filtered = faculty.filter(f =>
@@ -14,7 +14,7 @@ export default function Faculty() {
     f.email.toLowerCase().includes(search.toLowerCase())
   );
 
-  const getProjectCount = (name: string) => PROJECTS.filter(p => p.faculty === name).length;
+  const getProjectCount = (name) => PROJECTS.filter(p => p.faculty === name).length;
 
   return (
     <div>

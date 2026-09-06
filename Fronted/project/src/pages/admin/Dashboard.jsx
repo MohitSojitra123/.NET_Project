@@ -1,18 +1,18 @@
-import { Users, GraduationCap, BookOpen, FolderKanban, CheckSquare, TrendingUp, Clock, AlertCircle } from 'lucide-react';
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { Users, GraduationCap, BookOpen, FolderKanban, CheckSquare, Clock } from 'lucide-react';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import StatCard from '../../components/StatCard';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge, priorityBadge } from '../../components/Badge';
 import { USERS, PROJECTS, TASKS } from '../../data/mockData';
 
-const STATUS_COLORS: Record<string, string> = {
+const STATUS_COLORS = {
   'Completed': '#10b981',
   'In Progress': '#3b82f6',
   'Not Started': '#6b7280',
   'On Hold': '#f59e0b',
 };
 
-const PRIORITY_COLORS: Record<string, string> = {
+const PRIORITY_COLORS = {
   Critical: '#ef4444',
   High: '#f97316',
   Medium: '#3b82f6',

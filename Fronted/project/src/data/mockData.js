@@ -1,60 +1,10 @@
-export type Role = 'Admin' | 'Faculty' | 'Student';
-
-export interface User {
-  id: number;
-  fullName: string;
-  email: string;
-  mobile: string;
-  role: Role;
-  isActive: boolean;
-  avatar?: string;
-}
-
-export interface RoleRecord {
-  id: number;
-  roleName: string;
-  description: string;
-}
-
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  status: 'Not Started' | 'In Progress' | 'Completed' | 'On Hold';
-  startDate: string;
-  endDate: string;
-  faculty: string;
-  students: string[];
-  totalTasks: number;
-  completedTasks: number;
-  progress: number;
-}
-
-export interface Task {
-  id: number;
-  title: string;
-  description: string;
-  project: string;
-  projectId: number;
-  priority: 'Low' | 'Medium' | 'High' | 'Critical';
-  status: 'Pending' | 'In Progress' | 'Completed' | 'Rejected';
-  assignedTo: string;
-  dueDate: string;
-  assignedScore: number;
-  earnedScore: number | null;
-  facultyRemarks: string;
-  studentRemarks: string;
-  startDate: string;
-  completedDate: string | null;
-}
-
-export const ROLES: RoleRecord[] = [
+export const ROLES = [
   { id: 1, roleName: 'Admin', description: 'Full access to all modules and settings.' },
   { id: 2, roleName: 'Student', description: 'Can view and manage own projects and tasks.' },
   { id: 3, roleName: 'Faculty', description: 'Can supervise students and manage project assignments.' },
 ];
 
-export const USERS: User[] = [
+export const USERS = [
   { id: 1, fullName: 'Aarav Patel', email: 'admin@spms.com', mobile: '9876543210', role: 'Admin', isActive: true },
   { id: 2, fullName: 'Priya Sharma', email: 'priya.sharma@spms.com', mobile: '9876543211', role: 'Faculty', isActive: true },
   { id: 3, fullName: 'Rohan Mehta', email: 'rohan.mehta@spms.com', mobile: '9876543212', role: 'Student', isActive: true },
@@ -65,7 +15,7 @@ export const USERS: User[] = [
   { id: 8, fullName: 'Arjun Reddy', email: 'arjun.reddy@spms.com', mobile: '9876543217', role: 'Student', isActive: true },
 ];
 
-export const PROJECTS: Project[] = [
+export const PROJECTS = [
   {
     id: 1,
     title: 'E-Commerce Platform',
@@ -133,7 +83,7 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const TASKS: Task[] = [
+export const TASKS = [
   {
     id: 1,
     title: 'Design Database Schema',

@@ -1,6 +1,4 @@
-type Variant = 'blue' | 'green' | 'yellow' | 'red' | 'gray' | 'purple' | 'orange' | 'teal';
-
-const variants: Record<Variant, string> = {
+const variants = {
   blue: 'bg-blue-100 text-blue-700',
   green: 'bg-green-100 text-green-700',
   yellow: 'bg-amber-100 text-amber-700',
@@ -11,11 +9,11 @@ const variants: Record<Variant, string> = {
   teal: 'bg-teal-100 text-teal-700',
 };
 
-export function roleBadge(role: string): Variant {
+export function roleBadge(role) {
   return role === 'Admin' ? 'blue' : role === 'Faculty' ? 'teal' : 'orange';
 }
 
-export function statusBadge(status: string): Variant {
+export function statusBadge(status) {
   if (status === 'Completed') return 'green';
   if (status === 'In Progress') return 'blue';
   if (status === 'Pending') return 'yellow';
@@ -27,14 +25,14 @@ export function statusBadge(status: string): Variant {
   return 'gray';
 }
 
-export function priorityBadge(priority: string): Variant {
+export function priorityBadge(priority) {
   if (priority === 'Critical') return 'red';
   if (priority === 'High') return 'orange';
   if (priority === 'Medium') return 'blue';
   return 'gray';
 }
 
-export default function Badge({ label, variant }: { label: string; variant: Variant }) {
+export default function Badge({ label, variant }) {
   return (
     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${variants[variant]}`}>
       {label}

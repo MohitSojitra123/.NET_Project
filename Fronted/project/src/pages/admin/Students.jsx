@@ -1,21 +1,26 @@
 import { useState } from 'react';
-import { Plus, Pencil, Trash2, Search, GraduationCap } from 'lucide-react';
+import { Plus, Pencil, Trash2, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge } from '../../components/Badge';
-import { USERS, User, PROJECTS } from '../../data/mockData';
+import { USERS, PROJECTS } from '../../data/mockData';
 
 export default function Students() {
-  const [students, setStudents] = useState<User[]>(USERS.filter(u => u.role === 'Student'));
+  const [students, setStudents] = useState(USERS.filter(u => u.role === 'Student'));
   const [search, setSearch] = useState('');
-  const [deleteId, setDeleteId] = useState<number | null>(null);
+  const [deleteId, setDeleteId] = useState(null);
 
   const filtered = students.filter(s =>
     s.fullName.toLowerCase().includes(search.toLowerCase()) ||
     s.email.toLowerCase().includes(search.toLowerCase())
   );
 
-  const getProjectCount = (name: string) => PROJECTS.filter(p => p.students.includes(name)).length;
+  const getProjectCount = (name) => PROJECTS.filter(p => p.students.includes(name)).length;
+
+  const handleDelete = (id) => {
+    setStudents(prev => prev.filter(s => s.id !== id));
+    setDeleteId(null);
+  };
 
   return (
     <div>
@@ -82,6 +87,22 @@ export default function Students() {
           </table>
         </div>
       </div>
+
+      {deleteId && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full">
+            <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Trash2 size={22} className="text-red-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 text-center">Delete Student?</h3>
+            <p className="text-sm text-gray-500 text-center mt-2">This action cannot be undone.</p>
+            <div className="flex gap-3 mt-6">
+              <button onClick={() => setDeleteId(null)} className="flex-1 py-2 border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50">Cancel</button>
+              <button onClick={() => handleDelete(deleteId)} className="flex-1 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium">Delete</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,19 +3,19 @@ import { Plus, Pencil, Trash2, Search, Filter, CheckSquare } from 'lucide-react'
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge, priorityBadge } from '../../components/Badge';
-import { TASKS, Task } from '../../data/mockData';
+import { TASKS } from '../../data/mockData';
 
 const priorities = ['All', 'Critical', 'High', 'Medium', 'Low'];
 const statuses = ['All', 'Pending', 'In Progress', 'Completed', 'Rejected'];
 
 export default function Tasks() {
-  const [tasks, setTasks] = useState<Task[]>(TASKS);
+  const [tasks, setTasks] = useState(TASKS);
   const [search, setSearch] = useState('');
   const [priorityFilter, setPriorityFilter] = useState('All');
   const [statusFilter, setStatusFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-  const [deleteId, setDeleteId] = useState<number | null>(null);
-  const [statusDropdown, setStatusDropdown] = useState<number | null>(null);
+  const [deleteId, setDeleteId] = useState(null);
+  const [statusDropdown, setStatusDropdown] = useState(null);
 
   const filtered = tasks.filter(t => {
     const matchSearch = t.title.toLowerCase().includes(search.toLowerCase()) || t.description.toLowerCase().includes(search.toLowerCase());
@@ -24,12 +24,12 @@ export default function Tasks() {
     return matchSearch && matchPriority && matchStatus;
   });
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (id) => {
     setTasks(prev => prev.filter(t => t.id !== id));
     setDeleteId(null);
   };
 
-  const changeStatus = (id: number, status: Task['status']) => {
+  const changeStatus = (id, status) => {
     setTasks(prev => prev.map(t => t.id === id ? { ...t, status } : t));
     setStatusDropdown(null);
   };
@@ -132,7 +132,7 @@ export default function Tasks() {
                         </button>
                         {statusDropdown === task.id && (
                           <div className="absolute top-full left-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-lg z-20 min-w-[140px] py-1">
-                            {(['Pending', 'In Progress', 'Completed', 'Rejected'] as Task['status'][]).map(s => (
+                            {['Pending', 'In Progress', 'Completed', 'Rejected'].map(s => (
                               <button
                                 key={s}
                                 onClick={() => changeStatus(task.id, s)}

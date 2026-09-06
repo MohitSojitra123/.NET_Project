@@ -20,9 +20,9 @@ export default function ProjectForm() {
     endDate: '',
     status: 'Not Started',
     faculty: '',
-    students: [] as string[],
+    students: [],
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (isEdit) {
@@ -42,7 +42,7 @@ export default function ProjectForm() {
   }, [id, isEdit]);
 
   const validate = () => {
-    const e: Record<string, string> = {};
+    const e = {};
     if (!form.title.trim()) e.title = 'Project title is required.';
     if (!form.startDate) e.startDate = 'Start date is required.';
     if (!form.endDate) e.endDate = 'End date is required.';
@@ -51,13 +51,13 @@ export default function ProjectForm() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
     navigate('/projects');
   };
 
-  const toggleStudent = (name: string) => {
+  const toggleStudent = (name) => {
     setForm(prev => ({
       ...prev,
       students: prev.students.includes(name)
@@ -128,7 +128,7 @@ export default function ProjectForm() {
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">Status</label>
                 <select
                   value={form.status}
-                  onChange={e => setForm(p => ({ ...p, status: e.target.value as any }))}
+                  onChange={e => setForm(p => ({ ...p, status: e.target.value }))}
                   className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400"
                 >
                   {statuses.map(s => <option key={s}>{s}</option>)}

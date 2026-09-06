@@ -1,8 +1,8 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import Breadcrumb from '../components/Breadcrumb';
-import Badge, { statusBadge, priorityBadge } from '../components/Badge';
 import { PROJECTS, TASKS, USERS } from '../data/mockData';
 import { Download, TrendingUp, Users, FolderKanban, Star } from 'lucide-react';
+import { Legend } from 'recharts';
 
 const studentPerformance = USERS.filter(u => u.role === 'Student').map(s => {
   const studentTasks = TASKS.filter(t => t.assignedTo === s.fullName);

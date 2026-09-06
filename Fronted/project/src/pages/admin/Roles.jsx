@@ -2,19 +2,19 @@ import { useState } from 'react';
 import { Plus, Pencil, Trash2, Search, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
-import { ROLES, RoleRecord } from '../../data/mockData';
+import { ROLES } from '../../data/mockData';
 
 export default function Roles() {
-  const [roles, setRoles] = useState<RoleRecord[]>(ROLES);
+  const [roles, setRoles] = useState(ROLES);
   const [search, setSearch] = useState('');
-  const [deleteId, setDeleteId] = useState<number | null>(null);
+  const [deleteId, setDeleteId] = useState(null);
 
   const filtered = roles.filter(r =>
     r.roleName.toLowerCase().includes(search.toLowerCase()) ||
     r.description.toLowerCase().includes(search.toLowerCase())
   );
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (id) => {
     setRoles(prev => prev.filter(r => r.id !== id));
     setDeleteId(null);
   };

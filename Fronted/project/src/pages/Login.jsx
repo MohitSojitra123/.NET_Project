@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { Eye, EyeOff, GraduationCap, LogIn, Info } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -21,7 +21,7 @@ export default function Login() {
 
   if (user) return <Navigate to="/dashboard" replace />;
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setLoading(true);

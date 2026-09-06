@@ -1,12 +1,7 @@
 import { ChevronRight, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface BreadcrumbItem {
-  label: string;
-  to?: string;
-}
-
-export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+export default function Breadcrumb({ items }) {
   return (
     <nav className="flex items-center gap-1 text-sm text-gray-500 mb-4">
       <Link to="/dashboard" className="flex items-center gap-1 hover:text-blue-600 transition-colors">

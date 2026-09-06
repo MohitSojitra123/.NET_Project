@@ -23,7 +23,7 @@ export default function TaskForm() {
     assignedScore: '',
     facultyRemarks: '',
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (isEdit) {
@@ -46,7 +46,7 @@ export default function TaskForm() {
   }, [id, isEdit]);
 
   const validate = () => {
-    const e: Record<string, string> = {};
+    const e = {};
     if (!form.title.trim()) e.title = 'Task title is required.';
     if (!form.projectId) e.projectId = 'Project is required.';
     if (!form.dueDate) e.dueDate = 'Due date is required.';
@@ -54,13 +54,13 @@ export default function TaskForm() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
     navigate('/tasks');
   };
 
-  const set = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const set = (key) => (e) => {
     setForm(prev => ({ ...prev, [key]: e.target.value }));
     setErrors(prev => ({ ...prev, [key]: '' }));
   };

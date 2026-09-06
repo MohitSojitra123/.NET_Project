@@ -16,13 +16,13 @@ export default function Profile() {
   });
   const [saved, setSaved] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSaved(true);
     setTimeout(() => setSaved(false), 3000);
   };
 
-  const set = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
+  const set = (key) => (e) =>
     setForm(prev => ({ ...prev, [key]: e.target.value }));
 
   return (
@@ -131,7 +131,7 @@ export default function Profile() {
               ].map(({ label, key }) => (
                 <div key={key}>
                   <label className="block text-sm font-medium text-gray-700 mb-1.5">{label}</label>
-                  <input type="password" value={form[key as keyof typeof form]} onChange={set(key as keyof typeof form)} placeholder="••••••••"
+                  <input type="password" value={form[key]} onChange={set(key)} placeholder="••••••••"
                     className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400" />
                 </div>
               ))}

@@ -1,14 +1,3 @@
-import { ReactNode } from 'react';
-
-interface StatCardProps {
-  title: string;
-  value: string | number;
-  icon: ReactNode;
-  color: 'blue' | 'green' | 'amber' | 'rose' | 'teal' | 'violet';
-  subtitle?: string;
-  trend?: { value: number; label: string };
-}
-
 const colorMap = {
   blue: { bg: 'bg-blue-50', icon: 'bg-blue-600', text: 'text-blue-600', trend: 'text-blue-500' },
   green: { bg: 'bg-emerald-50', icon: 'bg-emerald-600', text: 'text-emerald-600', trend: 'text-emerald-500' },
@@ -18,8 +7,8 @@ const colorMap = {
   violet: { bg: 'bg-violet-50', icon: 'bg-violet-600', text: 'text-violet-600', trend: 'text-violet-500' },
 };
 
-export default function StatCard({ title, value, icon, color, subtitle, trend }: StatCardProps) {
-  const c = colorMap[color];
+export default function StatCard({ title, value, icon, color, subtitle, trend }) {
+  const c = colorMap[color] || colorMap.blue;
   return (
     <div className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between">

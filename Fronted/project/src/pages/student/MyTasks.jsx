@@ -2,21 +2,21 @@ import { useState } from 'react';
 import { CheckSquare, Star, MessageSquare } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge, priorityBadge } from '../../components/Badge';
-import { TASKS, Task } from '../../data/mockData';
+import { TASKS } from '../../data/mockData';
 import { useAuth } from '../../contexts/AuthContext';
 
 export default function MyTasks() {
   const { user } = useAuth();
-  const [tasks, setTasks] = useState<Task[]>(TASKS.filter(t => t.assignedTo === user?.fullName));
-  const [remarkingId, setRemarkingId] = useState<number | null>(null);
+  const [tasks, setTasks] = useState(TASKS.filter(t => t.assignedTo === user?.fullName));
+  const [remarkingId, setRemarkingId] = useState(null);
   const [remark, setRemark] = useState('');
-  const [activeTab, setActiveTab] = useState<string>('All');
+  const [activeTab, setActiveTab] = useState('All');
 
   const tabs = ['All', 'Pending', 'In Progress', 'Completed', 'Rejected'];
 
   const filtered = activeTab === 'All' ? tasks : tasks.filter(t => t.status === activeTab);
 
-  const saveRemark = (id: number) => {
+  const saveRemark = (id) => {
     setTasks(prev => prev.map(t => t.id === id ? { ...t, studentRemarks: remark } : t));
     setRemarkingId(null);
     setRemark('');

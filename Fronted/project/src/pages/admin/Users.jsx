@@ -3,15 +3,15 @@ import { Plus, Pencil, Trash2, Search, Filter, Users as UsersIcon } from 'lucide
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { roleBadge, statusBadge } from '../../components/Badge';
-import { USERS, User, Role } from '../../data/mockData';
+import { USERS } from '../../data/mockData';
 
 export default function Users() {
-  const [users, setUsers] = useState<User[]>(USERS);
+  const [users, setUsers] = useState(USERS);
   const [search, setSearch] = useState('');
-  const [roleFilter, setRoleFilter] = useState<string>('All');
-  const [statusFilter, setStatusFilter] = useState<string>('All');
+  const [roleFilter, setRoleFilter] = useState('All');
+  const [statusFilter, setStatusFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-  const [deleteId, setDeleteId] = useState<number | null>(null);
+  const [deleteId, setDeleteId] = useState(null);
 
   const filtered = users.filter(u => {
     const matchSearch =
@@ -23,7 +23,7 @@ export default function Users() {
     return matchSearch && matchRole && matchStatus;
   });
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (id) => {
     setUsers(prev => prev.filter(u => u.id !== id));
     setDeleteId(null);
   };

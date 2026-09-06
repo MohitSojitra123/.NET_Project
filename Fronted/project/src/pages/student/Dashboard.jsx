@@ -1,5 +1,5 @@
-import { FolderKanban, CheckSquare, Star, TrendingUp, Clock, AlertCircle } from 'lucide-react';
-import { RadialBarChart, RadialBar, ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
+import { FolderKanban, CheckSquare, Star, TrendingUp, Clock } from 'lucide-react';
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts';
 import StatCard from '../../components/StatCard';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge, priorityBadge } from '../../components/Badge';

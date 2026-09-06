@@ -23,7 +23,7 @@ export default function RoleForm() {
     }
   }, [id, isEdit]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!roleName.trim()) { setError('Role name is required.'); return; }
     navigate('/roles');

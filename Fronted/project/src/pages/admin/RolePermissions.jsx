@@ -1,23 +1,17 @@
 import { useState } from 'react';
-import { Plus, Save, Trash2, UserCog } from 'lucide-react';
+import { Plus, Save, Trash2 } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { roleBadge } from '../../components/Badge';
 import { USERS, ROLES } from '../../data/mockData';
 
-interface UserRoleEntry {
-  id: number;
-  userId: number;
-  roleId: number;
-}
-
-const initial: UserRoleEntry[] = USERS.map((u, i) => ({
+const initial = USERS.map((u, i) => ({
   id: i + 1,
   userId: u.id,
   roleId: ROLES.find(r => r.roleName === u.role)?.id || 1,
 }));
 
 export default function RolePermissions() {
-  const [entries, setEntries] = useState<UserRoleEntry[]>(initial);
+  const [entries, setEntries] = useState(initial);
   const [newUserId, setNewUserId] = useState('');
   const [newRoleId, setNewRoleId] = useState('');
   const [saved, setSaved] = useState(false);
@@ -104,7 +98,7 @@ export default function RolePermissions() {
                     </td>
                     <td className="px-5 py-3.5 text-sm text-gray-600">{user.email}</td>
                     <td className="px-5 py-3.5">
-                      <Badge label={role.roleName} variant={roleBadge(role.roleName as any)} />
+                      <Badge label={role.roleName} variant={roleBadge(role.roleName)} />
                     </td>
                     <td className="px-5 py-3.5">
                       <button onClick={() => setEntries(prev => prev.filter(e => e.id !== entry.id))}

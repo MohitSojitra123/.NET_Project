@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Save, ArrowLeft } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
-import { USERS, Role } from '../../data/mockData';
+import { USERS } from '../../data/mockData';
 
 export default function UserForm() {
   const { id } = useParams();
@@ -14,10 +14,10 @@ export default function UserForm() {
     email: '',
     password: '',
     mobile: '',
-    role: '' as Role | '',
+    role: '',
     isActive: true,
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (isEdit) {
@@ -36,7 +36,7 @@ export default function UserForm() {
   }, [id, isEdit]);
 
   const validate = () => {
-    const e: Record<string, string> = {};
+    const e = {};
     if (!form.fullName.trim()) e.fullName = 'Full name is required.';
     if (!form.email.trim()) e.email = 'Email is required.';
     if (!isEdit && !form.password.trim()) e.password = 'Password is required.';
@@ -46,13 +46,13 @@ export default function UserForm() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
     navigate('/users');
   };
 
-  const field = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const field = (key) => (e) => {
     setForm(prev => ({ ...prev, [key]: e.target.value }));
     setErrors(prev => ({ ...prev, [key]: '' }));
   };
@@ -81,8 +81,8 @@ export default function UserForm() {
                 </label>
                 <input
                   type={type}
-                  value={String(form[key as keyof typeof form])}
-                  onChange={field(key as keyof typeof form)}
+                  value={String(form[key])}
+                  onChange={field(key)}
                   placeholder={placeholder}
                   className={`w-full px-4 py-2.5 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all ${
                     errors[key] ? 'border-red-400' : 'border-gray-200 focus:border-blue-400'

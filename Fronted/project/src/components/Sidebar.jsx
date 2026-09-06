@@ -7,15 +7,7 @@ import {
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 
-interface NavItem {
-  label: string;
-  to?: string;
-  icon: React.ReactNode;
-  children?: NavItem[];
-  roles?: string[];
-}
-
-const allNavItems: NavItem[] = [
+const allNavItems = [
   { label: 'Dashboard', to: '/dashboard', icon: <LayoutDashboard size={18} /> },
   {
     label: 'Admin Modules',
@@ -51,7 +43,7 @@ const allNavItems: NavItem[] = [
   { label: 'My Tasks', to: '/my-tasks', icon: <CheckSquare size={18} />, roles: ['Student'] },
 ];
 
-function NavItemComp({ item, userRole }: { item: NavItem; userRole: string }) {
+function NavItemComp({ item, userRole }) {
   const [open, setOpen] = useState(true);
 
   if (item.roles && !item.roles.includes(userRole)) return null;
@@ -85,7 +77,7 @@ function NavItemComp({ item, userRole }: { item: NavItem; userRole: string }) {
 
   return (
     <NavLink
-      to={item.to!}
+      to={item.to}
       className={({ isActive }) =>
         `flex items-center gap-3 px-6 py-2.5 text-sm transition-all ${
           isActive
@@ -100,7 +92,7 @@ function NavItemComp({ item, userRole }: { item: NavItem; userRole: string }) {
   );
 }
 
-export default function Sidebar({ collapsed, onCollapse }: { collapsed: boolean; onCollapse: () => void }) {
+export default function Sidebar({ collapsed, onCollapse }) {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 

@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\migrations\\20260816094951_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\migrations\\20260816094951_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\dto\\roledto\\rolerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\dto\\roledto\\rolerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\controllers\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\controllers\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\controllers\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\controllers\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\dto\\userroledto\\userroleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\dto\\roledto\\roleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\dto\\roledto\\roleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\dto\\roledto\\rolerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\dto\\roledto\\rolerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|solutionrelative:student_project_management\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFF181DA-181D-916C-5D27-AA0577C06C20}|Student_Project_Management\\Student_Project_Management.csproj|d:\\darshan mca\\.net_project\\backend\\student_project_management\\student_project_management\\models\\rolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,49 +66,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Student_Project_Management\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "Student_Project_Management\\Controllers\\UsersController.cs*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwCEAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "20260816094951_InitialCreate.cs",
+              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Migrations\\20260816094951_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Student_Project_Management\\Migrations\\20260816094951_InitialCreate.cs",
+              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Migrations\\20260816094951_InitialCreate.cs",
+              "RelativeToolTip": "Student_Project_Management\\Migrations\\20260816094951_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T07:25:34.588Z",
+              "WhenOpened": "2026-08-21T07:56:35.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Program.cs",
+              "RelativeDocumentMoniker": "Student_Project_Management\\Program.cs",
+              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Program.cs*",
+              "RelativeToolTip": "Student_Project_Management\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T07:29:48.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserRoleController.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\UserRoleController.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Controllers\\UserRoleController.cs",
               "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\UserRoleController.cs",
               "RelativeToolTip": "Student_Project_Management\\Controllers\\UserRoleController.cs",
-              "ViewState": "AgIAAP4AAAAAAAAAAAAqwBUBAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-18T16:26:38.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-18T16:26:38.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRoleResponseDTO.cs",
-              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
-              "RelativeDocumentMoniker": "Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
-              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
-              "RelativeToolTip": "Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-18T16:25:42.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "UserRoleRequestDTO.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleRequestDTO.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleRequestDTO.cs",
@@ -112,20 +120,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "RoleController.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Controllers\\RoleController.cs",
               "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\RoleController.cs",
               "RelativeToolTip": "Student_Project_Management\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-18T16:22:36.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-18T16:22:36.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "RoleResponseDTO.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\RoleDTO\\RoleResponseDTO.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\DTO\\RoleDTO\\RoleResponseDTO.cs",
@@ -137,7 +144,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Data\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "Student_Project_Management\\Data\\AppDBContext.cs",
+              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Data\\AppDBContext.cs",
+              "RelativeToolTip": "Student_Project_Management\\Data\\AppDBContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T15:31:18.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RoleRequestDTO.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\RoleDTO\\RoleRequestDTO.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\DTO\\RoleDTO\\RoleRequestDTO.cs",
@@ -149,7 +168,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Student_Project_Management\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Student_Project_Management\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T07:25:34.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserRoleResponseDTO.cs",
+              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
+              "RelativeDocumentMoniker": "Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
+              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
+              "RelativeToolTip": "Student_Project_Management\\DTO\\UserRoleDTO\\UserRoleResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T16:25:42.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "20260818154054_Add_Foreign_Key_Cascade.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Migrations\\20260818154054_Add_Foreign_Key_Cascade.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Migrations\\20260818154054_Add_Foreign_Key_Cascade.cs",
@@ -161,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UsersModel.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Models\\UsersModel.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Models\\UsersModel.cs",
@@ -173,19 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDBContext.cs",
-              "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Data\\AppDBContext.cs",
-              "RelativeDocumentMoniker": "Student_Project_Management\\Data\\AppDBContext.cs",
-              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Data\\AppDBContext.cs",
-              "RelativeToolTip": "Student_Project_Management\\Data\\AppDBContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-18T15:31:18.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "UserRoleModel.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Models\\UserRoleModel.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Models\\UserRoleModel.cs",
@@ -197,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "RoleModel.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Models\\RoleModel.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Models\\RoleModel.cs",

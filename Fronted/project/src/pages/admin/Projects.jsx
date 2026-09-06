@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { Plus, Pencil, Trash2, Search, Filter, FolderKanban, ChevronDown, ChevronRight, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge } from '../../components/Badge';
-import { PROJECTS, Project } from '../../data/mockData';
+import { PROJECTS } from '../../data/mockData';
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>(PROJECTS);
+  const [projects, setProjects] = useState(PROJECTS);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-  const [deleteId, setDeleteId] = useState<number | null>(null);
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [deleteId, setDeleteId] = useState(null);
+  const [expandedId, setExpandedId] = useState(null);
 
   const filtered = projects.filter(p => {
     const matchSearch = p.title.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase());
@@ -19,7 +19,7 @@ export default function Projects() {
     return matchSearch && matchStatus;
   });
 
-  const handleDelete = (id: number) => {
+  const handleDelete = (id) => {
     setProjects(prev => prev.filter(p => p.id !== id));
     setDeleteId(null);
   };
@@ -99,8 +99,8 @@ export default function Projects() {
                 </tr>
               ) : (
                 filtered.map((project, idx) => (
-                  <>
-                    <tr key={project.id} className="hover:bg-gray-50 transition-colors">
+                  <Fragment key={project.id}>
+                    <tr className="hover:bg-gray-50 transition-colors">
                       <td className="px-3 py-3.5">
                         <button
                           onClick={() => setExpandedId(expandedId === project.id ? null : project.id)}
@@ -142,7 +142,7 @@ export default function Projects() {
                       </td>
                     </tr>
                     {expandedId === project.id && (
-                      <tr key={`expand-${project.id}`} className="bg-blue-50/50">
+                      <tr className="bg-blue-50/50">
                         <td colSpan={9} className="px-10 py-3">
                           <div className="text-xs font-semibold text-gray-600 mb-2 flex items-center gap-2">
                             <Users size={13} /> Assigned Students
@@ -158,7 +158,7 @@ export default function Projects() {
                         </td>
                       </tr>
                     )}
-                  </>
+                  </Fragment>
                 ))
               )}
             </tbody>

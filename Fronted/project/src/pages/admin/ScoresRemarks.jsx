@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Star, Save, Search } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import Badge, { statusBadge, priorityBadge } from '../../components/Badge';
-import { TASKS, Task } from '../../data/mockData';
+import { TASKS } from '../../data/mockData';
 
 export default function ScoresRemarks() {
-  const [tasks, setTasks] = useState<Task[]>(TASKS);
+  const [tasks, setTasks] = useState(TASKS);
   const [search, setSearch] = useState('');
-  const [editingId, setEditingId] = useState<number | null>(null);
+  const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState({ earnedScore: '', facultyRemarks: '' });
 
   const filtered = tasks.filter(t =>
@@ -16,12 +16,12 @@ export default function ScoresRemarks() {
     t.project.toLowerCase().includes(search.toLowerCase())
   );
 
-  const startEdit = (task: Task) => {
+  const startEdit = (task) => {
     setEditingId(task.id);
     setEditData({ earnedScore: String(task.earnedScore ?? ''), facultyRemarks: task.facultyRemarks });
   };
 
-  const saveEdit = (id: number) => {
+  const saveEdit = (id) => {
     setTasks(prev => prev.map(t =>
       t.id === id
         ? { ...t, earnedScore: parseFloat(editData.earnedScore) || null, facultyRemarks: editData.facultyRemarks }
