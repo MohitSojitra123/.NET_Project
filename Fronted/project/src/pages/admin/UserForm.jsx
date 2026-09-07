@@ -9,6 +9,11 @@ export default function UserForm() {
   const navigate = useNavigate();
   const isEdit = !!id;
 
+  const [Rols,setRoles]=useState([]);
+  const [users, setUsers] = useState([]);
+
+
+
   const [form, setForm] = useState({
     fullName: '',
     email: '',
@@ -16,7 +21,10 @@ export default function UserForm() {
     mobile: '',
     role: '',
     isActive: true,
+   ProfilePic:"" 
   });
+
+
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -35,6 +43,7 @@ export default function UserForm() {
     }
   }, [id, isEdit]);
 
+
   const validate = () => {
     const e = {};
     if (!form.fullName.trim()) e.fullName = 'Full name is required.';
@@ -46,16 +55,179 @@ export default function UserForm() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e) => {
+
+  
+
+const Fetch_All_Users = async () => {
+    try {
+        const res = await fetch(
+            "https://localhost:7125/api/Users"
+        );
+        if (!res.ok) {
+            throw new Error("Failed to fetch users");
+        }
+        const data = await res.json();
+        setUsers(data);
+        return data;
+    } catch (error) {
+        console.error("Error Fetching Users:", error);
+
+        return [];
+    }
+};
+
+
+const handleSubmit = async (e) => {
+
     e.preventDefault();
-    if (!validate()) return;
+
+    if (!validate()) {
+        return;
+    }
+    console.log("Form Data:", form);
+
+    const final_send_object = {
+
+        fullName: form.fullName,
+
+        email: form.email,
+
+        password: form.password,
+
+        mobileNumber: form.mobile,
+
+        profilePicturePath: form.ProfilePic
+    };
+
+
+    try {
+
+        // Add User
+        const res = await fetch(
+            "https://localhost:7125/api/Users",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(final_send_object)
+            }
+        );
+
+
+        // Check API response
+        if (!res.ok) {
+
+            const errorData = await res.text();
+
+            throw new Error(
+                errorData || `HTTP Error: ${res.status}`
+            );
+        }
+
+
+        console.log("User Added Successfully");
+
+
+        // Get latest users directly from API
+        const latest_users = await Fetch_All_Users();
+
+        console.log("Latest Users:", latest_users);
+
+
+        // Filter user by email
+        const current_user = latest_users.filter(
+            (v) => v.email === form.email
+        );
+
+
+        console.log("Current User:", current_user);
+
+
+        const Set_Role={
+                roleId: Number(form.role),
+                userId: Number(current_user[0].userId)
+        }
+
+// Set New Add User Role 
+fetch('https://localhost:7125/api/UserRole', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(Set_Role)
+})
+// Set New Add User Role 
+
+        if (current_user.length > 0) {
+            console.log(
+                "New User:",
+                current_user[0]
+            );
+        }
+
+    alert("User Added : ")
     navigate('/users');
-  };
+
+    } catch (error) {
+        console.error("Error:", error);
+    }
+};
+
+
+
+
+  // const handleSubmit =async (e) => {
+  //   e.preventDefault();
+  //   if (!validate()) return;
+  //   console.log(form)
+
+  //      const final_send_object={
+  //       fullName: form.fullName,
+  //       email: form.email,
+  //       password:form.password ,
+  //       mobileNumber: form.mobile,
+  //       profilePicturePath: form.ProfilePic
+  //     }
+
+  //       const res=await fetch('https://localhost:7125/api/Users', {
+  //        method: 'POST',
+  //       headers: {
+  //      'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(final_send_object)
+  //     })
+
+  //       await  Fetch_All_Users();
+
+  //   const  current_user= users.filter(v=> v.Email==form.email);
+
+  //       console.log("Current Users : " +  current_user);
+
+  //   // alert("User Added : ")
+
+  //   // navigate('/users');
+  // };
 
   const field = (key) => (e) => {
     setForm(prev => ({ ...prev, [key]: e.target.value }));
     setErrors(prev => ({ ...prev, [key]: '' }));
   };
+
+
+
+      const Fetch_Role=async()=>{
+           const res=await fetch('https://localhost:7125/api/Role');
+           const data=await res.json();
+           console.log(data)
+           setRoles(data)
+      }
+
+      useEffect(()=>{
+          Fetch_Role();
+      },[])
 
   return (
     <div>
@@ -74,6 +246,7 @@ export default function UserForm() {
               { label: 'Email', key: 'email', placeholder: 'Enter email', type: 'email' },
               { label: isEdit ? 'New Password (leave blank to keep)' : 'Password', key: 'password', placeholder: 'Enter login password', type: 'password' },
               { label: 'Mobile', key: 'mobile', placeholder: 'Enter mobile number', type: 'tel' },
+                { label: 'Profile PicturePath', key: 'ProfilePic', placeholder: 'Enter Profile PicturePath', type: 'url' },
             ].map(({ label, key, placeholder, type }) => (
               <div key={key}>
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">
@@ -102,14 +275,18 @@ export default function UserForm() {
                 }`}
               >
                 <option value="">-- Select Role --</option>
-                <option>Admin</option>
-                <option>Faculty</option>
-                <option>Student</option>
+                 {
+                  Rols.map((val) => (
+                  <option key={val.roleId} value={val.roleId}>
+                  {val.roleName}
+                   </option>
+                  ))
+                 }
               </select>
               {errors.role && <p className="text-xs text-red-500 mt-1">{errors.role}</p>}
             </div>
 
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">Status</label>
               <select
                 value={form.isActive ? 'Active' : 'Inactive'}
@@ -119,7 +296,7 @@ export default function UserForm() {
                 <option>Active</option>
                 <option>Inactive</option>
               </select>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-3 pt-2">
               <button type="submit" className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">

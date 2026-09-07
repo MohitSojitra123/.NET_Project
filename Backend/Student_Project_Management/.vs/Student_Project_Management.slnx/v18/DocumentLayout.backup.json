@@ -78,8 +78,7 @@
               "RelativeToolTip": "Student_Project_Management\\Migrations\\20260816094951_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-21T07:56:35.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-21T07:56:35.54Z"
             },
             {
               "$type": "Document",
@@ -87,9 +86,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Program.cs",
               "RelativeDocumentMoniker": "Student_Project_Management\\Program.cs",
-              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Program.cs*",
-              "RelativeToolTip": "Student_Project_Management\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "ToolTip": "D:\\DARSHAN MCA\\.NET_Project\\Backend\\Student_Project_Management\\Student_Project_Management\\Program.cs",
+              "RelativeToolTip": "Student_Project_Management\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-21T07:29:48.989Z",
               "EditorCaption": ""
