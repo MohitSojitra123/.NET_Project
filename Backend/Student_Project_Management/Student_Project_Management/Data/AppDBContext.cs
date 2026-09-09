@@ -42,7 +42,22 @@ namespace Student_Project_Management.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
 
-    
+            // ==========================================
+            // UNIQUE EMAIL
+            // ==========================================
+
+            modelBuilder.Entity<UsersModel>()
+                .HasIndex(x => x.Email)
+                .IsUnique();
+
+
+            // ==========================================
+            // UNIQUE ROLE NAME
+            // ==========================================
+
+            modelBuilder.Entity<RoleModel>()
+                .HasIndex(x => x.RoleName)
+                .IsUnique();
         }
 
     }

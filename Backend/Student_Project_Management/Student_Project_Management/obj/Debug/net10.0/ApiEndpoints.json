@@ -130,7 +130,7 @@
   },
   {
     "ContainingType": "Student_Project_Management.Controllers.RoleController",
-    "Method": "DeleteRoleById",
+    "Method": "DeleteRole",
     "RelativePath": "api/Role/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,

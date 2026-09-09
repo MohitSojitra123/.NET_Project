@@ -23,6 +23,7 @@ namespace Student_Project_Management.Models
         [ForeignKey("UserId")]
         public UsersModel User { get; set; }
 
+
         
 
     }

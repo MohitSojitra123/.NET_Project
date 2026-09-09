@@ -21,56 +21,56 @@ VALUES
     'rahul.patel@gmail.com',
     'Rahul@123',
     '9876543210',
-    '/images/users/rahul.jpg'
+    'https://img.magnific.com/free-photo/close-up-portrait-curly-handsome-european-male_176532-8133.jpg?semt=ais_hybrid&w=740&q=80'
 ),
 (
     'Priya Shah',
     'priya.shah@gmail.com',
     'Priya@123',
     '9876543211',
-    '/images/users/priya.jpg'
+    'https://media.istockphoto.com/id/1020049956/photo/afro-caribbean-young-woman-in-barcelona.jpg?s=612x612&w=0&k=20&c=SBZlm69EbhrV2rWdmLHzTZHj1VgsrPW1d31aIOj1Ps4='
 ),
 (
     'Amit Joshi',
     'amit.joshi@gmail.com',
     'Amit@123',
     '9876543212',
-    '/images/users/amit.jpg'
+    'https://img.magnific.com/free-photo/young-man-sad-expression_1194-2826.jpg?semt=ais_hybrid&w=740&q=80'
 ),
 (
     'Neha Mehta',
     'neha.mehta@gmail.com',
     'Neha@123',
     '9876543213',
-    '/images/users/neha.jpg'
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrHlrr-J2JATwoPLKtN1M5jtgN547COw8LJCcWT4-IscNh2M6bgoNx72I&s=10'
 ),
 (
     'Karan Desai',
     'karan.desai@gmail.com',
     'Karan@123',
     '9876543214',
-    '/images/users/karan.jpg'
+    'https://img.magnific.com/free-photo/artist-white_1368-6282.jpg?semt=ais_hybrid&w=740&q=80'
 ),
 (
     'Sneha Patel',
     'sneha.patel@gmail.com',
     'Sneha@123',
     '9876543215',
-    '/images/users/sneha.jpg'
+    'https://img.magnific.com/free-photo/portrait-beautiful-young-woman_23-2148856070.jpg?semt=ais_hybrid&w=740&q=80'
 ),
 (
     'Vivek Shah',
     'vivek.shah@gmail.com',
     'Vivek@123',
     '9876543216',
-    '/images/users/vivek.jpg'
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjW152T-OiITXY5yoLZyPgoUfFBqqyPrv5Z1kcLrfTY4uJN9-NRDh8Two&s=10'
 ),
 (
     'Pooja Joshi',
     'pooja.joshi@gmail.com',
     'Pooja@123',
     '9876543217',
-    '/images/users/pooja.jpg'
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMIydVYjBH48PDLn0uUXN65p3Ex5I2fQg38ROgy8qLVybmIik3_sgLZS2C&s=10'
 );
 
 
