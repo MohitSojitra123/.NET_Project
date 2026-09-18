@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { Save, ArrowLeft } from "lucide-react";
 import Breadcrumb from "../../components/Breadcrumb";
+import { authFetch } from "../../services/api";
 
 export default function RoleForm() {
   // ==========================================
@@ -39,7 +40,7 @@ export default function RoleForm() {
       setFetchingRole(true);
       setError("");
 
-      const response = await fetch(`https://localhost:7125/api/Role/${id}`);
+      const response = await authFetch(`/Role/${id}`);
 
       if (!response.ok) {
         throw new Error(`HTTP Error: ${response.status}`);
@@ -81,13 +82,8 @@ export default function RoleForm() {
   // ==========================================
 
   const Insert_Role = async () => {
-    const response = await fetch("https://localhost:7125/api/Role", {
+    const response = await authFetch("/Role", {
       method: "POST",
-
-      headers: {
-        "Content-Type": "application/json",
-      },
-
       body: JSON.stringify({
         roleName: roleName.trim(),
         description: description.trim() ? description.trim() : null,
@@ -109,13 +105,8 @@ export default function RoleForm() {
   // ==========================================
 
   const Update_Role = async () => {
-    const response = await fetch(`https://localhost:7125/api/Role/${id}`, {
+    const response = await authFetch(`/Role/${id}`, {
       method: "PUT",
-
-      headers: {
-        "Content-Type": "application/json",
-      },
-
       body: JSON.stringify({
         roleName: roleName.trim(),
         description: description.trim() ? description.trim() : null,

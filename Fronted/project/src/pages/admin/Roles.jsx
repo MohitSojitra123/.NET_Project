@@ -373,6 +373,7 @@ import { useState, useEffect } from 'react';
 import { Plus, Pencil, Trash2, Search, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb';
+import { authFetch } from '../../services/api';
 
 export default function Roles() {
 
@@ -398,9 +399,7 @@ export default function Roles() {
 
     try {
 
-      const response = await fetch(
-        'https://localhost:7125/api/Role'
-      );
+      const response = await authFetch('/Role');
 
       if (!response.ok) {
         throw new Error(`HTTP Error: ${response.status}`);
@@ -470,13 +469,10 @@ export default function Roles() {
       // DELETE API CALL
       // ==========================================
 
-      const response = await fetch(
-        `https://localhost:7125/api/Role/${id}`,
+      const response = await authFetch(
+        `/Role/${id}`,
         {
           method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json',
-          },
         }
       );
 

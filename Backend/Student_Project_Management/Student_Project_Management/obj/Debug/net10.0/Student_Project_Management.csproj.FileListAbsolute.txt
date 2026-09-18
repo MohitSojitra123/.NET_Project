@@ -158,7 +158,6 @@ D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_M
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\staticwebassets.development.json
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\swae.build.ex.cache
-D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_.22E843B8.Up2Date
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_Project_Management.dll
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\refint\Student_Project_Management.dll
@@ -166,3 +165,6 @@ D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_M
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_Project_Management.genruntimeconfig.cache
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\ref\Student_Project_Management.dll
 D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\Student_Project_Management.sourcelink.json
+D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+D:\DARSHAN MCA\.NET_Project\Backend\Student_Project_Management\Student_Project_Management\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

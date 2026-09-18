@@ -4,9 +4,9 @@ import { Eye, EyeOff, GraduationCap, LogIn, Info } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const demoCredentials = [
-  { role: 'Admin', email: 'admin@spms.com', password: 'admin123' },
-  { role: 'Faculty', email: 'priya.sharma@spms.com', password: 'faculty123' },
-  { role: 'Student', email: 'rohan.mehta@spms.com', password: 'student123' },
+  { role: 'Admin', email: 'rahul.patel@gmail.com', password: 'Rahul@123' },
+  { role: 'Faculty', email: 'priya.shah@gmail.com', password: 'Priya@123' },
+  { role: 'Student', email: 'karan.desai@gmail.com', password: 'Karan@123' },
 ];
 
 export default function Login() {
@@ -25,11 +25,18 @@ export default function Login() {
     e.preventDefault();
     setError('');
     setLoading(true);
-    await new Promise(r => setTimeout(r, 600));
-    const ok = login(email, password);
-    setLoading(false);
-    if (ok) navigate('/dashboard');
-    else setError('Invalid email or password. Use demo credentials below.');
+    try {
+      const result = await login(email, password);
+      if (result.success) {
+        navigate('/dashboard');
+      } else {
+        setError(result.message || 'Invalid email or password.');
+      }
+    } catch (err) {
+      setError(err.message || 'Authentication error. Please check your credentials.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

@@ -1932,6 +1932,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Save, ArrowLeft } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
+import { authFetch } from '../../services/api';
 
 export default function UserForm() {
 
@@ -2042,9 +2043,7 @@ export default function UserForm() {
 
     try {
 
-      const res = await fetch(
-        'https://localhost:7125/api/Users'
-      );
+      const res = await authFetch('/Users');
 
       if (!res.ok) {
         throw new Error(
@@ -2083,9 +2082,7 @@ export default function UserForm() {
 
     try {
 
-      const res = await fetch(
-        'https://localhost:7125/api/Role'
-      );
+      const res = await authFetch('/Role');
 
       if (!res.ok) {
         throw new Error(
@@ -2126,8 +2123,8 @@ export default function UserForm() {
 
     try {
 
-      const res = await fetch(
-        `https://localhost:7125/api/Users/${id}`
+      const res = await authFetch(
+        `/Users/${id}`
       );
 
       if (!res.ok) {
@@ -2266,16 +2263,10 @@ export default function UserForm() {
         );
 
 
-        res = await fetch(
-          "https://localhost:7125/api/Users",
+        res = await authFetch(
+          "/Users",
           {
             method: "POST",
-
-            headers: {
-              "Content-Type":
-                "application/json"
-            },
-
             body: JSON.stringify(
               final_send_object
             )
@@ -2328,16 +2319,10 @@ export default function UserForm() {
           };
 
 
-          await fetch(
-            "https://localhost:7125/api/UserRole",
+          await authFetch(
+            "/UserRole",
             {
               method: "POST",
-
-              headers: {
-                "Content-Type":
-                  "application/json"
-              },
-
               body: JSON.stringify(
                 Set_Role
               )
@@ -2426,16 +2411,10 @@ export default function UserForm() {
         // PUT API
         // ===================================================
 
-        res = await fetch(
-          `https://localhost:7125/api/Users/${id}`,
+        res = await authFetch(
+          `/Users/${id}`,
           {
             method: "PUT",
-
-            headers: {
-              "Content-Type":
-                "application/json"
-            },
-
             body: JSON.stringify(
               updateObject
             )
@@ -2469,16 +2448,10 @@ export default function UserForm() {
         };
 
 
-        await fetch(
-          "https://localhost:7125/api/UserRole",
+        await authFetch(
+          "/UserRole",
           {
             method: "POST",
-
-            headers: {
-              "Content-Type":
-                "application/json"
-            },
-
             body: JSON.stringify(
               roleObject
             )

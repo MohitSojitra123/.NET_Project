@@ -15,6 +15,8 @@ import Breadcrumb from "../../components/Breadcrumb";
 
 import Badge, { roleBadge, statusBadge } from "../../components/Badge";
 
+import { authFetch } from "../../services/api";
+
 export default function Users() {
   // =========================================================
   // STATE
@@ -46,7 +48,7 @@ export default function Users() {
       setLoading(true);
       setError("");
 
-      const Res = await fetch("https://localhost:7125/api/Users");
+      const Res = await authFetch("/Users");
 
       if (!Res.ok) {
         throw new Error(`HTTP Error: ${Res.status}`);
@@ -142,8 +144,8 @@ export default function Users() {
         return;
       }
 
-      const Res = await fetch(
-        `https://localhost:7125/api/Users/${id}`,
+      const Res = await authFetch(
+        `/Users/${id}`,
         {
           method: "DELETE",
         }
